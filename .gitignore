@@ -68,7 +68,8 @@ local.properties
 # Maven
 ######################
 /log/
-/target/
+*/target/*
+
 
 ######################
 # Gradle
@@ -80,6 +81,7 @@ local.properties
 # Package Files
 ######################
 *.jar
+*.jar.orginal
 *.war
 *.ear
 *.db
@@ -139,3 +141,5 @@ Desktop.ini
 # ESLint
 ######################
 .eslintcache
+
+/target/
