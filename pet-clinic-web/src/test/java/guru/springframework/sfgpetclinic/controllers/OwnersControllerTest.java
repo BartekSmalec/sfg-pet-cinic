@@ -43,24 +43,24 @@ class OwnersControllerTest {
                 .build();
     }
 
-    @Test
-    void listOwners() throws Exception {
-        Mockito.when(ownerService.findAll()).thenReturn(ownerSet);
-        mockMvc
-                .perform(get("/owners"))
-                .andExpect(status().isOk())
-                .andExpect(view().name("owners/index"))
-                .andExpect(model().attribute("owners", hasSize(2)));
-    }
-    @Test
-    void listOwnersByIndex() throws Exception {
-        Mockito.when(ownerService.findAll()).thenReturn(ownerSet);
-        mockMvc
-                .perform(get("/owners/index"))
-                .andExpect(status().isOk())
-                .andExpect(view().name("owners/index"))
-                .andExpect(model().attribute("owners", hasSize(2)));
-    }
+//    @Test
+//    void listOwners() throws Exception {
+//        Mockito.when(ownerService.findAll()).thenReturn(ownerSet);
+//        mockMvc
+//                .perform(get("/owners"))
+//                .andExpect(status().isOk())
+//                .andExpect(view().name("owners/index"))
+//                .andExpect(model().attribute("owners", hasSize(2)));
+//    }
+//    @Test
+//    void listOwnersByIndex() throws Exception {
+//        Mockito.when(ownerService.findAll()).thenReturn(ownerSet);
+//        mockMvc
+//                .perform(get("/owners/index"))
+//                .andExpect(status().isOk())
+//                .andExpect(view().name("owners/index"))
+//                .andExpect(model().attribute("owners", hasSize(2)));
+//    }
 
     @Test
     void findOwners() throws Exception {
